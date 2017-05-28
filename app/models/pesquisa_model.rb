@@ -1,0 +1,2 @@
+class PesquisaModel < ApplicationRecord
+end

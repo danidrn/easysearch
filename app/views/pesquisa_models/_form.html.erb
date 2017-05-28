@@ -1,0 +1,42 @@
+<%= form_with(model: pesquisa_model, local: true) do |form| %>
+  <% if pesquisa_model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pesquisa_model.errors.count, "error") %> prohibited this pesquisa_model from being saved:</h2>
+
+      <ul>
+      <% pesquisa_model.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo, id: :pesquisa_model_titulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_area :descricao, id: :pesquisa_model_descricao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :publico_alvo %>
+    <%= form.text_field :publico_alvo, id: :pesquisa_model_publico_alvo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_limite %>
+    <%= form.date_select :data_limite, id: :pesquisa_model_data_limite %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_field :link, id: :pesquisa_model_link %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

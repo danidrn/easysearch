@@ -1,0 +1,2 @@
+module PesquisaModelsHelper
+end

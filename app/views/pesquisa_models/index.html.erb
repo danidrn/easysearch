@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pesquisa Models</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Descricao</th>
+      <th>Publico alvo</th>
+      <th>Data limite</th>
+      <th>Link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pesquisa_models.each do |pesquisa_model| %>
+      <tr>
+        <td><%= pesquisa_model.titulo %></td>
+        <td><%= pesquisa_model.descricao %></td>
+        <td><%= pesquisa_model.publico_alvo %></td>
+        <td><%= pesquisa_model.data_limite %></td>
+        <td><%= pesquisa_model.link %></td>
+        <td><%= link_to 'Show', pesquisa_model %></td>
+        <td><%= link_to 'Edit', edit_pesquisa_model_path(pesquisa_model) %></td>
+        <td><%= link_to 'Destroy', pesquisa_model, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pesquisa Model', new_pesquisa_model_path %>

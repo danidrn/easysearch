@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @pesquisa_model.titulo %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @pesquisa_model.descricao %>
+</p>
+
+<p>
+  <strong>Publico alvo:</strong>
+  <%= @pesquisa_model.publico_alvo %>
+</p>
+
+<p>
+  <strong>Data limite:</strong>
+  <%= @pesquisa_model.data_limite %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @pesquisa_model.link %>
+</p>
+
+<%= link_to 'Edit', edit_pesquisa_model_path(@pesquisa_model) %> |
+<%= link_to 'Back', pesquisa_models_path %>
